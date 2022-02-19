@@ -64,3 +64,11 @@ function solution(matrix) {
     }
     return c;
 }
+//9
+function solution(inputArray) {
+    let length = 0;
+    for(const value of inputArray){
+        length = Math.max(length, value.length) 
+    }
+    return inputArray.filter(element => element.length === length);
+}
