@@ -72,3 +72,26 @@ function solution(inputArray) {
     }
     return inputArray.filter(element => element.length === length);
 }
+//10
+function solution(s1, s2) {
+    let krknvox = 0;
+    for(let i = 0; i < s1.length; i++) {
+        let j = s2.indexOf(s1[i]);
+        if(j >= 0){
+            krknvox++;
+            s2 = s2.replace(s1[i],'');
+        }
+    }
+    return krknvox;
+}
+//11
+function solution(n) {
+    let a = n.toString();
+    let firstHalf = a.slice(0,a.length / 2);
+    let secondHalf = a.slice(a.length / 2,a.length);
+    let arr1 = firstHalf.split('');
+    let arr2 = secondHalf.split('');
+    let sum1 = arr1.reduce((a,b) => Number(a) + Number(b));
+    let sum2 = arr2.reduce((a,b) => Number(a) + Number(b));
+    return sum1 === sum2;
+}
